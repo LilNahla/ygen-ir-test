@@ -1,0 +1,10 @@
+declare void @printf(ptr %fmt, ...)
+
+const str = "Hello World!"
+
+define i32 @main() {
+  entry:
+    %ptr = ptr str
+    call void @printf ptr %ptr
+    ret i32 0
+}
